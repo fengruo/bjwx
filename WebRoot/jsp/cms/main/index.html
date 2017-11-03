@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            云开阳软件(sunskysoft)
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/bjwx/jsp/cms/main/css/x-admin.css" type="text/css" media="all"></link></head>
+    <body>
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header header header-demo">
+                <div class="layui-main">
+                    <a class="logo" href="./index.html">
+                        SUNSKYSOFT
+                    </a>
+                    <ul class="layui-nav" lay-filter="">
+                      <li class="layui-nav-item"><img src="/bjwx/jsp/cms/main/images/logo.jpg" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35px" alt=""></li>
+                      <li class="layui-nav-item">
+                        <a href="javascript:;">admin</a>
+                        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                         <!--  <dd><a href="">个人信息</a></dd>
+                          <dd><a href="">切换帐号</a></dd> -->
+                          <dd><a href="/bjwx/login.jsp">退出</a></dd>
+                        </dl>
+                      </li>
+                      <!-- <li class="layui-nav-item">
+                        <a href="" title="消息">
+                            <i class="layui-icon" style="top: 1px;">&#xe63a;</i>
+                        </a>
+                        </li> -->
+                      <li class="layui-nav-item x-index"><a href="/">前台首页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-side layui-bg-black x-side">
+                <div class="layui-side-scroll">
+                    <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe62d;</i><cite>代金券管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                    <dd class="">
+                                        <a href="javascript:;" _href="/bjwx/jsp/cms/voucher/setVoucher.jsp">
+                                            <cite>设置代金券</cite>
+                                        </a>
+                                    </dd>
+                                </dd>
+                                <dd class="">
+                                    <dd class="">
+                                        <a href="javascript:;" _href="/bjwx/jsp/cms/voucher/listVoucher.jsp">
+                                            <cite>代金券统计</cite>
+                                        </a>
+                                    </dd>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe634;</i><cite>抽奖管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                    <dd class="">
+                                        <a href="javascript:;" _href="/bjwx/jsp/cms/lucky/setlucky.jsp">
+                                            <cite>抽奖设置</cite>
+                                        </a>
+                                    </dd>
+                                </dd>
+                                <dd class="">
+                                    <dd class="">
+                                        <a href="javascript:;" _href="/bjwx/jsp/cms/lucky/listlucky.jsp">
+                                            <cite>抽奖统计</cite>
+                                        </a>
+                                    </dd>
+                                </dd>
+                            </dl>
+                        </li>
+                       
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe606;</i><cite>红包管理</cite>
+                            </a>
+                            <!-- <dl class="layui-nav-child">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./comment-list.html">
+                                        <cite>随机红包设置</cite>
+                                    </a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" _href="./feedback-list.html">
+                                        <cite>固定金额红包设置</cite>
+                                    </a>
+                                </dd>
+                                 <dd class="">
+                                    <a href="javascript:;" _href="./feedback-list.html">
+                                        <cite>随机红包统计</cite>
+                                    </a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" _href="./feedback-list.html">
+                                        <cite>固定金额红包统计</cite>
+                                    </a>
+                                </dd>
+                            </dl> -->
+                        </li>
+                        <li class="layui-nav-item" style="height: 30px; text-align: center">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="layui-tab layui-tab-card site-demo-title x-main" lay-filter="x-tab" lay-allowclose="true">
+                <div class="x-slide_left"></div>
+                <ul class="layui-tab-title">
+                    <li class="layui-this">
+                        我的桌面
+                        <i class="layui-icon layui-unselect layui-tab-close">ဆ</i>
+                    </li>
+                </ul>
+                <div class="layui-tab-content site-demo site-demo-body">
+                    <div class="layui-tab-item layui-show">
+                        <iframe frameborder="0" src="/bjwx/jsp/cms/main/welcome.html" class="x-iframe"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="site-mobile-shade">
+            </div>
+        </div>
+        <script src="/bjwx/jsp/cms/main/lib/layui/layui.js" charset="utf-8"></script>
+        <script src="/bjwx/jsp/cms/main/js/x-admin.js"></script>
+    </body>
+</html>

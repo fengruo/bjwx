@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.action.extension" value="tony" />
+	<constant name="struts.objectFactory" value="spring" />
+	<constant name="struts.multipart.maxSize" value="52428800" />
+	<package name="tony" extends="struts-default">
+		<!-- 用于处理上传文件的公用ACTION，我因为项目使用了spring，所以class这样配置，否则，需要正常进行配置写完整类路径，此外，这里不需要配result节点 -->
+		
+		 <action name="com_*" class="commonAction" method="{1}">
+		 	<result name="success" type="stream">
+					<param name="contentType">text/plain</param>
+					<param name="inputName">textStream</param>
+			</result>
+			<result name="file" type="stream">
+					<param name="contentType">application/octet-stream</param>
+					<param name="inputName">textStream</param>
+					<param name="contentDisposition">attachment;filename="${disposition}"</param>
+					<param name="bufferSize">4096</param>
+			</result>
+		 </action>
+	     <action name="user_*" class="userAction" method="{1}">
+	          <result name="success" type="stream">
+					<param name="contentType">text/plain</param>
+					<param name="inputName">textStream</param>
+				</result>
+				<result name="file" type="stream">
+					<param name="contentType">application/octet-stream</param>
+					<param name="inputName">textStream</param>
+					<param name="contentDisposition">attachment;filename="${disposition}"</param>
+					<param name="bufferSize">4096</param>
+				</result>
+				<result name="logout">/index.jsp</result>
+				<result name="login">/jsp/index.jsp</result>
+				<result name="cmslogin">/jsp/cms/main/index.html</result>
+				<result name="cmslogout">/login.jsp</result>
+	     </action>
+	    
+	     <action name="lucky_*" class="luckyAction" method="{1}">
+	          <result name="success" type="stream">
+					<param name="contentType">text/plain</param>
+					<param name="inputName">textStream</param>
+				</result>
+	     </action>
+	      <action name="coucher_*" class="coucherAction" method="{1}">
+	          <result name="success" type="stream">
+					<param name="contentType">text/plain</param>
+					<param name="inputName">textStream</param>
+				</result>
+				<result name="save">/jsp/cms/voucher/setVoucher.jsp</result>
+	     </action>
+	      <action name="coucherWechat_*" class="coucherWechatAction" method="{1}">
+	          <result name="success" type="stream">
+					<param name="contentType">text/plain</param>
+					<param name="inputName">textStream</param>
+				</result>
+				 <result name="CoucherNotime">/jsp/page/voucher/jsp/voucherNotime.jsp</result>
+				  <result name="CoucherNohave">/jsp/page/voucher/jsp/voucherNohave.jsp</result>
+				   <result name="Coucherishave">/jsp/page/voucher/jsp/voucherIshave.jsp</result>
+				   <result name="CoucherShow">/jsp/page/voucher/jsp/voucherShow.jsp</result>
+				   
+	     </action>
+	      <action name="luckyWechat_*" class="luckyWechatAction" method="{1}">
+	          <result name="success" type="stream">
+					<param name="contentType">text/plain</param>
+					<param name="inputName">textStream</param>
+				</result>
+	     </action>
+	      <action name="userwechat_*" class="userWechatAction" method="{1}">
+	          <result name="success" type="stream">
+					<param name="contentType">text/plain</param>
+					<param name="inputName">textStream</param>
+				</result>
+	          <result name="Oauth2AccessTokenSuccess">/jsp/page/voucher/index.jsp</result>
+	          <result name="Oauth2AccessTokenFalse">/jsp/page/voucher/jsp/Oauth2AccessTokenFalse.jsp</result>
+	          <result name="toGetVoucherSuccess" type="redirectAction">coucherWechat_checkCoucherIshave.tony</result>
+	          <result name="toMyVoucherSuccess">/jsp/page/voucher/jsp/voucherMyhave.jsp</result>
+	          <result name="toLuckGetSuccess" type="redirect">/jsp/page/lucky/jsp/toChoice.jsp</result>
+	          <result name="toLuckMySuccess">/jsp/page/lucky/jsp/luckyMyhave.jsp</result>
+	          <result name="yesLucky" type="redirect">/jsp/page/lucky/jsp/luck.html</result>
+	          <result name="noLucky">/jsp/page/voucher/jsp/voucherNotime.jsp</result>
+	     </action>
+	     
+	</package>
+</struts>    

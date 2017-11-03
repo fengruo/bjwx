@@ -1,0 +1,37 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; border:0; outline:0;font-size: 12px;}
+ol, ul, li { list-style:none }
+a {color:#000; text-decoration:none; font-size:12px;}
+a:hover {color:#FF0000;}
+
+/* tony.lee */
+.lrtb tr{height: 30px;}
+.lrtb tr td{text-align: right;font-size: 12px;padding-top: 10px;}
+.lrtb tr td input[type="text"]{height:26px;width: 100%;border: 1px solid #d2d2d2;}
+.lrtb tr td input[type="file"]{height:26px;width: 100%;border: 1px solid #d2d2d2;}
+.lrtb tr td select{height:28px;width: 100%;border: 1px solid #d2d2d2;}
+.lrtb tr td input[type="number"]{height:26px;width: 50px !important;border: 1px solid #d2d2d2;}
+.redBorder{border: 1px solid red;}
+/* 表格样式 */
+.tbdiv table{border-collapse: collapse;border-spacing: 0;width: 100%;}
+.tbdiv table tr{height: 25px;}
+.tbdiv table tr:nth-child(2n+0){background-color: #eeeeee;}
+.tbdiv table  tr:not(.headTitle) :hover{background-color: #E0EEE0;}
+.tbdiv table tr td{border: 1px solid #cccccc;padding-left: 2px;}
+.headTitle{background-color: #6495ED;font-weight: bold;text-align: center;color:#fff}
+/* 按扭--1 */
+.bt_tony{font-size: 1em;
+	font-weight: bold;
+	color:#fff;
+	border-width: 1px;
+	border-style: solid;
+	-webkit-border-radius:.3125em; 
+	border-radius:.3125em;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top: 5px;padding-bottom: 5px; 
+	margin-left:10px;
+	background-color: #1E90FF /*{global-icon-color}*/;
+	}
+.bt_tony:link {
+	text-decoration: none !important;
+}
